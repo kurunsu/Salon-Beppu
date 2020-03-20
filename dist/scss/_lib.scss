@@ -1,0 +1,75 @@
+$mouse:#707070;
+$gray: #A193861F;
+$brown: #A1938689;
+$silver: #00000038;
+
+/////////
+//mixin//
+/////////
+
+@mixin sp {
+    @media screen and (max-width: 600px){
+        @content;
+    }
+}
+
+//////////
+///共通////
+//////////
+
+html {
+    font-size: 62.5%; //10px 
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.title {
+    height: 24px;
+    font-size: 1.8rem;
+    font-family: Roboto;
+    letter-spacing: 5.4px;
+    text-transform: uppercase;
+    color: $mouse;
+
+    @include sp {
+        padding-bottom: 50px;
+    }
+
+    &:after {
+        display: inline-block;
+        content: "";
+        border-top: 1px solid $mouse;
+        width: 5em;
+        margin-left: 2.25rem;
+        vertical-align: middle;
+    }   
+}
+
+.inner {
+    width: 100% - 8% * 2;
+    padding: 260px 0px 130px 0px;
+    margin: 0 auto;
+
+    @include sp {
+        padding: 65px 0px ;
+    }
+}
+
+.pc {
+    display: block;
+
+    @include sp {
+        display: none;
+    }
+}
+
+.sp {
+    display: none;
+
+    @include sp {
+        display: block;
+    }
+}

@@ -1,0 +1,137 @@
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 68px 77px;
+    position: absolute;
+    z-index: 15;
+
+    @include sp {
+        justify-content: space-between;
+        position: relative;
+        padding: 24px 0 24px 21px;
+        height: 70px;
+        background-color: #fff;
+
+        .ham {
+            position: absolute;
+            right: 30px;
+            width: 16px;
+            height: 14px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            z-index: 300;
+            cursor: pointer;
+
+
+            span {
+                display: inline-block;
+                width: 100%;
+                height: 1px;
+                background-color: #3B4043;
+                transition: all .6s;
+            }
+        }
+    }
+}
+
+.hd-logo {
+    font-size: 3.8rem;
+
+    @include sp {
+        font-size: 2.2rem;
+    }
+}
+
+.global-nav {
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    padding-top: 40px;
+    background-color: #fff;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto;
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        text-align: center;
+        padding: 0 14px;
+    }
+
+    &__item a{
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+        color: #111;
+    }
+
+    &__item a:hover {
+        background-color: #eee;
+    }
+}
+
+.pc-navmenu ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    margin: 20px;
+
+    li:not(:first-child){
+        margin-left: 15px;
+        color: $mouse;
+    }
+
+    li:first-child {
+        border-bottom: black 1px solid;
+    }
+
+    @include sp {
+        display: none;
+    }
+}
+.black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+// メニューが表示された時用のscss
+
+.nav-open .global-nav {
+    right: 0;
+}
+
+.nav-open .black-bg {
+    opacity: 8;
+    visibility: visible;
+}
+
+.nav-open .ham__lineham__line--1 {
+    transform: rotate(45deg);
+}
+
+.nav-open .ham__lineham__line--2 {
+    width: 0;
+}
+
+.nav-open .ham__lineham__line--3 {
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,77 @@
+.first-v {
+    width: 100%;
+    height: 80rem;
+    display: flex;
+    @include sp {
+        height: 58rem;
+    }
+    
+
+    &__wrap {
+        width: 46%;
+        position: relative;
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        width: 54%;
+        min-width: 609px;
+        overflow: hidden;
+        @include sp {
+            width: 100%;
+            min-width: 100%;
+            position: absolute;
+        }
+        
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.fv__catch {
+    width: 40rem;
+    position: absolute;
+    top: 40%;
+    left: 18%;
+    @include sp {
+        width: 31rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 50;
+    }
+    
+
+    .hair1 {
+        font-size: 3.8rem;
+        font-family: Hiragino Mincho Pro;
+        font-weight: lighter;
+        text-align: center;
+        letter-spacing: 0.38rem;
+        @include sp {
+            font-size: 2.3rem;
+            color: #fff;
+        }
+    }
+
+    .hair2 {
+        font-size: 3.8rem;
+        font-family: Zapfino;
+        font-weight: lighter;
+        letter-spacing: 0.38rem;
+        padding-top: 48px;
+        @include sp {
+            font-size: 2.8rem;
+            color: #fff;
+        }
+    }
+}
+
+

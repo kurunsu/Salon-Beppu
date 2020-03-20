@@ -1,0 +1,50 @@
+.m-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.m-catch {
+    width: 26%;
+    object-fit: cover;
+    overflow: hidden;
+
+    @include sp {
+        width: 100%;
+    }
+
+    .m-img {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+    
+    }
+
+    h3 {
+        font-family: Roboto Mono for Powerline;
+        letter-spacing: 3px;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 3.5rem;
+    }
+
+    .m-text {
+        margin-top: 3.5rem;
+        font-size: 1.6rem;
+        line-height: 2.0;
+    }
+
+    .m-cost {
+        margin: 3.5rem 0 7rem;
+        font-size: 1.6rem;
+        text-align: right;
+    }
+}
+
